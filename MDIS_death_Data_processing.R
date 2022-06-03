@@ -122,7 +122,7 @@ agg_tb<-function(data){
   
   agg_df$Total=apply(agg_df %>% dplyr:: select(`2001`:`2020`),1,sum)
   
-  year.tot<-apply(agg_df[1:2,] %>% dplyr:: select(`2001`:`2020`),2,sum)
+  year.tot<-apply(agg_df[1:3,] %>% dplyr:: select(`2001`:`2020`),2,sum)
   tot<-sum(year.tot)
   
   agg_df<-agg_df %>% select(Total,`2001`:`2020`)
